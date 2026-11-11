@@ -1,0 +1,41 @@
+<!doctype html>
+<html lang="ar" dir="rtl" data-auth="required">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+  <title>التنزيلات — رواد</title>
+  <meta name="description" content="القصص التي نزّلتها في رواد.">
+  <meta name="robots" content="noindex">
+  <meta name="theme-color" content="#b9e3ff">
+  <link rel="icon" type="image/png" sizes="64x64" href="assets/img/brand/favicon-64.png">
+  <link rel="apple-touch-icon" href="assets/img/brand/apple-touch-icon.png">
+  <link rel="manifest" href="manifest.webmanifest">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Baloo+Bhaijaan+2:wght@400..800&display=swap">
+  <link rel="stylesheet" href="assets/css/rowad.css">
+  <script src="assets/js/guard.js"></script>
+</head>
+<body class="app" data-page="downloads">
+  <script src="assets/js/icons.js"></script>
+  <a class="skip-link" href="#main">تخطَّ إلى المحتوى</a>
+
+  <header class="topbar" id="topbar"></header>
+
+  <main class="main stack" id="main">
+    <div class="page-head">
+      <h1 class="h1">التنزيلات</h1>
+      <p class="result-count" id="dlSummary" aria-live="polite" hidden>
+        <span id="dlCount"></span> — <span class="num" id="dlSize"></span> م.ب
+      </p>
+    </div>
+
+    <ul class="dl-list" id="dlList"></ul>
+    <div id="empty" hidden></div>
+  </main>
+
+  <script src="assets/js/data.js" defer></script>
+  <script src="assets/js/app.js" defer></script>
+  <script src="assets/js/pages.js" defer></script>
+</body>
+</html>

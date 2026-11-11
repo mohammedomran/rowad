@@ -1,0 +1,100 @@
+<!doctype html>
+<html lang="ar" dir="rtl" data-auth="required">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+  <title>ملفي — رواد</title>
+  <meta name="description" content="ملفك الشخصي في رواد: نجومك وأوسمتك.">
+  <meta name="robots" content="noindex">
+  <meta name="theme-color" content="#b9e3ff">
+  <link rel="icon" type="image/png" sizes="64x64" href="assets/img/brand/favicon-64.png">
+  <link rel="apple-touch-icon" href="assets/img/brand/apple-touch-icon.png">
+  <link rel="manifest" href="manifest.webmanifest">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Baloo+Bhaijaan+2:wght@400..800&display=swap">
+  <link rel="stylesheet" href="assets/css/rowad.css">
+  <script src="assets/js/guard.js"></script>
+</head>
+<body class="app" data-page="profile">
+  <script src="assets/js/icons.js"></script>
+  <a class="skip-link" href="#main">تخطَّ إلى المحتوى</a>
+
+  <header class="topbar" id="topbar"></header>
+
+  <main class="main stack" id="main">
+    <section class="profile-card" aria-label="بطاقتي">
+      <div class="profile-card__avatar">
+        <img src="assets/img/avatars/youssef.webp" alt="" width="256" height="256" data-avatar>
+        <button class="profile-card__edit" type="button" id="editAvatar" aria-label="تغيير الصورة">
+          <svg class="ico" aria-hidden="true"><use href="#i-pencil-simple"/></svg>
+        </button>
+      </div>
+      <h1 class="profile-card__name" data-child-name>صديقنا</h1>
+      <p data-child-age></p>
+      <p class="profile-card__stars">
+        <svg class="ico" aria-hidden="true"><use href="#i-star-fill"/></svg>
+        <span class="sr-only">رصيد النجوم:</span><span class="num" data-stars>0</span>
+      </p>
+    </section>
+
+    <section class="tiles" aria-label="أرقامي">
+      <div class="tile card">
+        <span class="tone-icon" data-tone="green"><svg class="ico" aria-hidden="true"><use href="#i-check-circle-fill"/></svg></span>
+        <span class="tile__value num" id="statDone">0</span>
+        <span class="tile__label">قصص مكتملة</span>
+      </div>
+      <a class="tile card" href="favourites.html">
+        <span class="tone-icon" data-tone="red"><svg class="ico" aria-hidden="true"><use href="#i-heart-fill"/></svg></span>
+        <span class="tile__value num" id="statFav">0</span>
+        <span class="tile__label">في المفضلة</span>
+      </a>
+      <a class="tile card" href="downloads.html">
+        <span class="tone-icon"><svg class="ico" aria-hidden="true"><use href="#i-download-simple-fill"/></svg></span>
+        <span class="tile__value num" id="statDl">0</span>
+        <span class="tile__label">تنزيلات</span>
+      </a>
+    </section>
+
+    <section aria-labelledby="badgesTitle">
+      <div class="section-head">
+        <h2 class="section-title" id="badgesTitle">
+          <svg class="ico ico--sun" aria-hidden="true"><use href="#i-trophy-fill"/></svg>أوسمتي
+        </h2>
+      </div>
+      <div class="card card--pad">
+        <ul class="badges" id="badges"></ul>
+      </div>
+    </section>
+
+    <section aria-labelledby="parentTitle">
+      <div class="section-head">
+        <h2 class="section-title" id="parentTitle">
+          <svg class="ico" aria-hidden="true"><use href="#i-shield-check-fill"/></svg>منطقة وليّ الأمر
+        </h2>
+        <span class="parent-note"><svg class="ico" aria-hidden="true"><use href="#i-lock-key-fill"/></svg>للكبار فقط</span>
+      </div>
+      <div class="card card--pad menu">
+        <button class="menu__item" type="button" id="openDashboard">
+          <span class="tone-icon" data-tone="sun"><svg class="ico" aria-hidden="true"><use href="#i-chart-bar-fill"/></svg></span>
+          <span>لوحة وليّ الأمر<small>وقت المشاهدة والنشاط الأسبوعي</small></span>
+          <svg class="ico" aria-hidden="true"><use href="#i-caret-left"/></svg>
+        </button>
+        <button class="menu__item" type="button" id="editChild">
+          <span class="tone-icon"><svg class="ico" aria-hidden="true"><use href="#i-user-fill"/></svg></span>
+          <span>بيانات الطفل<small>الاسم والعمر</small></span>
+          <svg class="ico" aria-hidden="true"><use href="#i-caret-left"/></svg>
+        </button>
+        <button class="menu__item menu__item--danger" type="button" id="logout">
+          <span class="tone-icon" data-tone="red"><svg class="ico" aria-hidden="true"><use href="#i-sign-out"/></svg></span>
+          <span>تسجيل الخروج</span>
+        </button>
+      </div>
+    </section>
+  </main>
+
+  <script src="assets/js/data.js" defer></script>
+  <script src="assets/js/app.js" defer></script>
+  <script src="assets/js/pages.js" defer></script>
+</body>
+</html>

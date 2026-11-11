@@ -1,0 +1,17 @@
+{
+  "name": "رواد — حكايات للأطفال",
+  "short_name": "رواد",
+  "description": "قصص ومغامرات بالعربية الفصحى للأطفال من 3 إلى 9 سنوات.",
+  "lang": "ar",
+  "dir": "rtl",
+  "start_url": "home.html",
+  "scope": "./",
+  "display": "standalone",
+  "orientation": "portrait",
+  "background_color": "#f4faff",
+  "theme_color": "#b9e3ff",
+  "icons": [
+    { "src": "assets/img/brand/icon-192.png", "sizes": "192x192", "type": "image/png", "purpose": "any" },
+    { "src": "assets/img/brand/icon-512.png", "sizes": "512x512", "type": "image/png", "purpose": "any" }
+  ]
+}

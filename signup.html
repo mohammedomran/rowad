@@ -1,0 +1,142 @@
+<!doctype html>
+<html lang="ar" dir="rtl" data-auth="guest">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+  <title>إنشاء حساب — رواد</title>
+  <meta name="description" content="أنشئ حسابًا في رواد واختر لطفلك اسمًا وصورة ليبدأ الحكايات.">
+  <meta name="theme-color" content="#b9e3ff">
+  <link rel="icon" type="image/png" sizes="64x64" href="assets/img/brand/favicon-64.png">
+  <link rel="apple-touch-icon" href="assets/img/brand/apple-touch-icon.png">
+  <link rel="manifest" href="manifest.webmanifest">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Baloo+Bhaijaan+2:wght@400..800&display=swap">
+  <link rel="stylesheet" href="assets/css/rowad.css">
+  <script src="assets/js/guard.js"></script>
+</head>
+<body class="auth" data-page="signup">
+  <script src="assets/js/icons.js"></script>
+  <div class="sky" aria-hidden="true">
+    <span class="cloud cloud--1"></span><span class="cloud cloud--2"></span><span class="cloud cloud--3"></span><span class="cloud cloud--4"></span>
+  </div>
+
+  <main class="auth__wrap" id="main">
+    <a class="auth__logo" href="index.html" aria-label="رواد — الصفحة الرئيسية">
+      <img src="assets/img/brand/logo-280.webp" alt="رواد" width="280" height="215">
+    </a>
+
+    <section class="auth__card" aria-labelledby="authTitle">
+      <img class="auth__mascot" src="assets/img/icons/robo-wave.webp" alt="" width="320" height="320">
+
+      <div class="auth__head" id="authHead">
+        <h1 class="h1" id="authTitle">حساب جديد</h1>
+        <p>خطوتان فقط وتبدأ الحكايات.</p>
+      </div>
+
+      <ol class="steps" aria-label="خطوات إنشاء الحساب">
+        <li class="steps__item" aria-current="step"><span class="steps__num num">1</span>حسابك</li>
+        <li class="steps__line" aria-hidden="true"></li>
+        <li class="steps__item"><span class="steps__num num">2</span>طفلك</li>
+      </ol>
+
+      <form class="auth__form" id="signupForm" novalidate>
+        <!-- الخطوة 1: وليّ الأمر -->
+        <div class="auth__form" id="step1">
+          <div class="field">
+            <label class="field__label" for="parentName">اسم وليّ الأمر</label>
+            <div class="field__control">
+              <svg class="ico field__icon" aria-hidden="true"><use href="#i-user-circle"/></svg>
+              <input class="input" id="parentName" name="parentName" autocomplete="name" maxlength="40" aria-describedby="parentNameErr" required>
+            </div>
+            <p class="field__error" id="parentNameErr" aria-live="polite"></p>
+          </div>
+
+          <div class="field">
+            <label class="field__label" for="email">البريد الإلكتروني</label>
+            <div class="field__control">
+              <svg class="ico field__icon" aria-hidden="true"><use href="#i-envelope-simple"/></svg>
+              <input class="input" id="email" name="email" type="email" inputmode="email" dir="ltr" autocomplete="email" autocapitalize="none" spellcheck="false" placeholder="name@example.com" aria-describedby="emailErr" required>
+            </div>
+            <p class="field__error" id="emailErr" aria-live="polite"></p>
+          </div>
+
+          <div class="field">
+            <label class="field__label" for="password">كلمة المرور</label>
+            <div class="field__control">
+              <svg class="ico field__icon" aria-hidden="true"><use href="#i-lock-key"/></svg>
+              <input class="input input--with-action" id="password" name="password" type="password" dir="ltr" autocomplete="new-password" minlength="8" aria-describedby="passwordHint passwordErr" required>
+              <button class="field__action" type="button" data-toggle-password="password" aria-pressed="false" aria-label="إظهار كلمة المرور">
+                <svg class="ico" aria-hidden="true"><use href="#i-eye"/></svg>
+              </button>
+            </div>
+            <p class="field__hint" id="passwordHint">8 أحرف على الأقل.</p>
+            <p class="field__error" id="passwordErr" aria-live="polite"></p>
+          </div>
+
+          <div class="field">
+            <label class="check">
+              <input type="checkbox" id="agree" name="agree" aria-describedby="agreeErr" required>
+              <span>أوافق على شروط الاستخدام وسياسة الخصوصية.</span>
+            </label>
+            <p class="field__error" id="agreeErr" aria-live="polite"></p>
+          </div>
+
+          <button class="btn btn--sun btn--lg btn--block" type="submit">التالي</button>
+        </div>
+
+        <!-- الخطوة 2: الطفل -->
+        <div class="auth__form" id="step2" hidden>
+          <div class="field">
+            <label class="field__label" for="childName">اسم الطفل</label>
+            <div class="field__control">
+              <svg class="ico field__icon" aria-hidden="true"><use href="#i-smiley"/></svg>
+              <input class="input" id="childName" name="childName" autocomplete="off" maxlength="20" aria-describedby="childNameErr">
+            </div>
+            <p class="field__error" id="childNameErr" aria-live="polite"></p>
+          </div>
+
+          <fieldset class="field" style="border:0;padding:0;margin:0;min-width:0">
+            <legend class="field__label" style="padding:0;margin-bottom:6px">عمر الطفل</legend>
+            <div class="age-picker" id="agePicker"></div>
+          </fieldset>
+
+          <fieldset class="field" style="border:0;padding:0;margin:0;min-width:0">
+            <legend class="field__label" style="padding:0;margin-bottom:10px">صورة الطفل</legend>
+            <div class="avatar-picker" id="avatarPicker"></div>
+          </fieldset>
+
+          <div class="dialog__actions" style="padding-bottom:0">
+            <button class="btn btn--ghost" type="button" id="backBtn" style="flex:0 0 auto">رجوع</button>
+            <button class="btn btn--sun" type="submit" id="submitBtn">إنشاء الحساب</button>
+          </div>
+        </div>
+      </form>
+
+      <div class="success" id="signupDone" hidden>
+        <span class="avatar" style="width:116px;height:116px"><img id="doneAvatar" src="assets/img/avatars/youssef.webp" alt="" width="256" height="256"></span>
+        <h2 class="h1">أهلًا بك يا <span id="doneName"></span>!</h2>
+        <p>الحساب جاهز، والحكايات في انتظارك.</p>
+        <a class="btn btn--sun btn--lg" id="startBtn" href="home.html">
+          <span class="btn__play"><svg class="ico" aria-hidden="true"><use href="#i-play-fill"/></svg></span>ابدأ المشاهدة
+        </a>
+      </div>
+
+      <p class="auth__alt" id="authAlt">لديك حساب؟ <a class="link" href="login.html">سجّل الدخول</a></p>
+    </section>
+
+    <aside class="auth__art" aria-hidden="true">
+      <img class="auth__art-logo" src="assets/img/brand/logo.webp" alt="" width="560" height="430">
+      <div class="auth__art-frame">
+        <img src="assets/img/hero/robo-wide.webp" alt="" width="1536" height="1024">
+      </div>
+      <p>حكايات تنمّي الخيال وتغرس القيم</p>
+    </aside>
+  </main>
+
+  <script src="https://cdn.jsdelivr.net/npm/canvas-confetti@1.9.3/dist/confetti.browser.min.js" integrity="sha384-sPwMflxqfAN+Q5mvlkLmHiX3PORGbZSXHiSGPTXT9VHCD/AB+b+r+vJWsqprv+7k" crossorigin="anonymous" defer></script>
+  <script src="assets/js/data.js" defer></script>
+  <script src="assets/js/app.js" defer></script>
+  <script src="assets/js/pages.js" defer></script>
+</body>
+</html>

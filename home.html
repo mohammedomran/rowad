@@ -1,0 +1,72 @@
+<!doctype html>
+<html lang="ar" dir="rtl" data-auth="required">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+  <title>الرئيسية — رواد</title>
+  <meta name="description" content="قصص ومغامرات عربية للأطفال من 3 إلى 9 سنوات.">
+  <meta name="robots" content="noindex">
+  <meta name="theme-color" content="#b9e3ff">
+  <link rel="icon" type="image/png" sizes="64x64" href="assets/img/brand/favicon-64.png">
+  <link rel="apple-touch-icon" href="assets/img/brand/apple-touch-icon.png">
+  <link rel="manifest" href="manifest.webmanifest">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Baloo+Bhaijaan+2:wght@400..800&display=swap">
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@11.1.14/swiper-bundle.min.css" integrity="sha384-IFb872aCXZQb6BKRUHmGn0YHKnFl4ylZjkgVRRyMTEQ5bjo/H6xFUiLJm6opOO66" crossorigin="anonymous">
+  <link rel="stylesheet" href="assets/css/rowad.css">
+  <link rel="preload" as="image" href="assets/img/hero/robo-wide.webp" fetchpriority="high">
+  <script src="assets/js/guard.js"></script>
+</head>
+<body class="app" data-page="home">
+  <script src="assets/js/icons.js"></script>
+  <a class="skip-link" href="#main">تخطَّ إلى المحتوى</a>
+
+  <header class="topbar" id="topbar"></header>
+
+  <main class="main stack enter" id="main">
+    <section class="greeting" aria-labelledby="hello">
+      <span class="greeting__wave" aria-hidden="true"><span>👋</span></span>
+      <div>
+        <h1 class="h1" id="hello">مرحبًا يا <span data-child-name>صديقنا</span></h1>
+        <p>حكاية جديدة في انتظارك اليوم!</p>
+      </div>
+    </section>
+
+    <section aria-roledescription="carousel" aria-label="قصص مميزة">
+      <div class="swiper hero" id="hero">
+        <div class="swiper-wrapper" id="heroSlides"></div>
+      </div>
+      <div class="hero-dots" id="heroDots"></div>
+    </section>
+
+    <nav class="cats" id="cats" aria-label="تصنيفات القصص"></nav>
+
+    <section id="continueSec" aria-labelledby="continueTitle" hidden>
+      <div class="section-head">
+        <h2 class="section-title" id="continueTitle">
+          <svg class="ico" aria-hidden="true"><use href="#i-play-circle-fill"/></svg>أكمل المشاهدة
+        </h2>
+      </div>
+      <div id="continueCard"></div>
+    </section>
+
+    <section aria-label="حكاية اليوم" id="dailyCard"></section>
+
+    <section aria-labelledby="newTitle">
+      <div class="section-head">
+        <h2 class="section-title" id="newTitle">
+          <svg class="ico ico--sun" aria-hidden="true"><use href="#i-sparkle-fill"/></svg>قصص جديدة
+        </h2>
+        <a class="see-all" href="stories.html">عرض الكل<svg class="ico" aria-hidden="true"><use href="#i-caret-left"/></svg></a>
+      </div>
+      <div class="rail rail--grid" id="newRail"></div>
+    </section>
+  </main>
+
+  <script src="https://cdn.jsdelivr.net/npm/swiper@11.1.14/swiper-bundle.min.js" integrity="sha384-JiF4eFN9V3I2Fry7TzFM3XKdq0P3abiVxpOeHjGz4cwvas+uNg6pFWVmuD6MKXqG" crossorigin="anonymous" defer></script>
+  <script src="assets/js/data.js" defer></script>
+  <script src="assets/js/app.js" defer></script>
+  <script src="assets/js/pages.js" defer></script>
+</body>
+</html>

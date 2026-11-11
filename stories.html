@@ -1,0 +1,55 @@
+<!doctype html>
+<html lang="ar" dir="rtl" data-auth="required">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+  <title>كل القصص — رواد</title>
+  <meta name="description" content="مكتبة قصص رواد: مغامرات، قصص قبل النوم، قصص القيم وقصص الحيوانات.">
+  <meta name="robots" content="noindex">
+  <meta name="theme-color" content="#b9e3ff">
+  <link rel="icon" type="image/png" sizes="64x64" href="assets/img/brand/favicon-64.png">
+  <link rel="apple-touch-icon" href="assets/img/brand/apple-touch-icon.png">
+  <link rel="manifest" href="manifest.webmanifest">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Baloo+Bhaijaan+2:wght@400..800&display=swap">
+  <link rel="stylesheet" href="assets/css/rowad.css">
+  <script src="assets/js/guard.js"></script>
+</head>
+<body class="app" data-page="stories">
+  <script src="assets/js/icons.js"></script>
+  <a class="skip-link" href="#main">تخطَّ إلى المحتوى</a>
+
+  <header class="topbar" id="topbar"></header>
+
+  <main class="main stack" id="main">
+    <div class="page-head">
+      <h1 class="h1">كل القصص</h1>
+      <p class="result-count" id="resultCount" aria-live="polite"></p>
+    </div>
+
+    <form class="search page-search" role="search" action="stories.html">
+      <label class="sr-only" for="q">ابحث عن قصة</label>
+      <svg class="ico" aria-hidden="true"><use href="#i-magnifying-glass"/></svg>
+      <input id="q" type="search" name="q" placeholder="ابحث عن قصة…" autocomplete="off" enterkeyhint="search">
+    </form>
+
+    <div class="chips" id="catChips" role="group" aria-label="التصنيف"></div>
+
+    <div class="grid-stories" id="grid"></div>
+
+    <div class="empty card" id="noResults" hidden>
+      <img src="assets/img/icons/robo-wave.webp" alt="" width="240" height="240">
+      <h2 class="h2">لم نجد قصة بهذا الاسم</h2>
+      <p>جرّب كلمة أخرى أو اختر تصنيفًا آخر.</p>
+      <button class="btn btn--sun" type="button" id="resetFilters">
+        <svg class="ico" aria-hidden="true"><use href="#i-squares-four-fill"/></svg>عرض كل القصص
+      </button>
+    </div>
+  </main>
+
+  <script src="assets/js/data.js" defer></script>
+  <script src="assets/js/app.js" defer></script>
+  <script src="assets/js/pages.js" defer></script>
+</body>
+</html>

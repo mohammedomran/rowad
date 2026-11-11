@@ -1,0 +1,129 @@
+<!doctype html>
+<html lang="ar" dir="rtl" data-auth="required">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+  <title>لوحة وليّ الأمر — رواد</title>
+  <meta name="description" content="تابع وقت مشاهدة طفلك ونشاطه الأسبوعي في رواد.">
+  <meta name="robots" content="noindex">
+  <meta name="theme-color" content="#b9e3ff">
+  <link rel="icon" type="image/png" sizes="64x64" href="assets/img/brand/favicon-64.png">
+  <link rel="apple-touch-icon" href="assets/img/brand/apple-touch-icon.png">
+  <link rel="manifest" href="manifest.webmanifest">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Baloo+Bhaijaan+2:wght@400..800&display=swap">
+  <link rel="stylesheet" href="assets/css/rowad.css">
+  <script src="assets/js/guard.js"></script>
+</head>
+<body class="app" data-page="dashboard" data-nav="profile">
+  <script src="assets/js/icons.js"></script>
+  <a class="skip-link" href="#main">تخطَّ إلى المحتوى</a>
+
+  <header class="topbar" id="topbar"></header>
+
+  <main class="main stack" id="main" hidden>
+    <div class="page-head">
+      <div>
+        <h1 class="h1">لوحة وليّ الأمر</h1>
+        <p>نشاط <span data-child-name>طفلك</span> خلال آخر سبعة أيام.</p>
+      </div>
+      <a class="btn btn--ghost btn--sm" href="profile.html">
+        <svg class="ico" aria-hidden="true"><use href="#i-arrow-right"/></svg>العودة إلى الملف
+      </a>
+    </div>
+
+    <section class="card card--pad kid-summary" aria-label="الطفل">
+      <span class="avatar"><img src="assets/img/avatars/youssef.webp" alt="" width="256" height="256" data-avatar></span>
+      <div>
+        <p class="kid-summary__name" data-child-name>طفلك</p>
+        <p class="muted" id="kidLine"></p>
+      </div>
+      <span class="stars-pill" style="margin-inline-start:auto;box-shadow:none;background:var(--sun-100)" role="img" aria-label="رصيد النجوم">
+        <svg class="ico" aria-hidden="true"><use href="#i-star-fill"/></svg><span class="num" data-stars>0</span>
+      </span>
+    </section>
+
+    <section class="tiles tiles--4" aria-label="ملخص الأسبوع">
+      <div class="tile card">
+        <span class="tone-icon"><svg class="ico" aria-hidden="true"><use href="#i-timer-fill"/></svg></span>
+        <span class="tile__value num" id="tWeek">0</span>
+        <span class="tile__label">دقائق هذا الأسبوع</span>
+      </div>
+      <div class="tile card">
+        <span class="tone-icon" data-tone="green"><svg class="ico" aria-hidden="true"><use href="#i-check-circle-fill"/></svg></span>
+        <span class="tile__value num" id="tDone">0</span>
+        <span class="tile__label">قصص مكتملة</span>
+      </div>
+      <div class="tile card">
+        <span class="tone-icon" data-tone="red"><svg class="ico" aria-hidden="true"><use href="#i-heart-fill"/></svg></span>
+        <span class="tile__value num" id="tFav">0</span>
+        <span class="tile__label">في المفضلة</span>
+      </div>
+      <div class="tile card">
+        <span class="tone-icon" data-tone="orange"><svg class="ico" aria-hidden="true"><use href="#i-fire-fill"/></svg></span>
+        <span class="tile__value num" id="tStreak">0</span>
+        <span class="tile__label">أيام متتالية</span>
+      </div>
+    </section>
+
+    <div class="dash-grid">
+      <section class="card card--pad chart" aria-labelledby="weekTitle">
+        <div class="chart__head">
+          <h2 class="h3" id="weekTitle">دقائق المشاهدة اليومية</h2>
+          <p class="chart__total" id="weekTotal"></p>
+        </div>
+        <div class="bars" id="weekChart"></div>
+        <div class="bars__axis" id="weekAxis" aria-hidden="true"></div>
+        <p class="muted" id="weekEmpty" hidden>لا توجد مشاهدات هذا الأسبوع بعد. سيظهر النشاط هنا بعد مشاهدة أول قصة.</p>
+
+        <button class="see-all" type="button" id="toggleTable" aria-expanded="false" aria-controls="weekTableWrap" style="margin-top:10px">
+          <svg class="ico" aria-hidden="true"><use href="#i-table"/></svg><span>عرض كجدول</span>
+        </button>
+        <div class="table-wrap" id="weekTableWrap" hidden>
+          <table class="data-table" id="weekTable">
+            <caption class="sr-only">دقائق المشاهدة لكل يوم</caption>
+            <thead><tr><th scope="col">اليوم</th><th scope="col">الدقائق</th></tr></thead>
+            <tbody></tbody>
+          </table>
+        </div>
+      </section>
+
+      <section class="card card--pad" aria-labelledby="catsTitle">
+        <div class="chart__head">
+          <h2 class="h3" id="catsTitle">ماذا يشاهد؟</h2>
+          <p class="chart__total">بالدقائق</p>
+        </div>
+        <ul class="hbars" id="catBars"></ul>
+      </section>
+    </div>
+
+    <div class="dash-grid">
+      <section class="card card--pad" aria-labelledby="recentTitle">
+        <h2 class="h3" id="recentTitle" style="margin-bottom:8px">آخر ما شاهد</h2>
+        <ul class="activity" id="activity"></ul>
+      </section>
+
+      <section class="card card--pad" aria-labelledby="limitTitle">
+        <div class="setting">
+          <div>
+            <h2 class="h3" id="limitTitle">الحد اليومي للمشاهدة</h2>
+            <p class="muted small">عند بلوغ الحد يتوقف التشغيل حتى اليوم التالي.</p>
+          </div>
+          <div class="segmented" id="limitSeg" role="group" aria-labelledby="limitTitle">
+            <button type="button" data-limit="30" aria-pressed="false"><span class="num">30</span> د</button>
+            <button type="button" data-limit="45" aria-pressed="false"><span class="num">45</span> د</button>
+            <button type="button" data-limit="60" aria-pressed="false"><span class="num">60</span> د</button>
+            <button type="button" data-limit="90" aria-pressed="false"><span class="num">90</span> د</button>
+            <button type="button" data-limit="0" aria-pressed="false">بلا حد</button>
+          </div>
+        </div>
+      </section>
+    </div>
+  </main>
+
+  <script src="assets/js/data.js" defer></script>
+  <script src="assets/js/app.js" defer></script>
+  <script src="assets/js/pages.js" defer></script>
+</body>
+</html>

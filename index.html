@@ -1,0 +1,133 @@
+<!doctype html>
+<html lang="ar" dir="rtl">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+  <title>رواد — حكايات عربية للأطفال من 3 إلى 9 سنوات</title>
+  <meta name="description" content="رواد: قصص ومغامرات بالعربية الفصحى للأطفال من 3 إلى 9 سنوات — مغامرات، قصص قبل النوم، قصص القيم وقصص الحيوانات.">
+  <meta name="theme-color" content="#b9e3ff">
+  <!-- عند النشر: أضف <link rel="canonical"> واجعل روابط og:image و og:url مطلقة باسم النطاق -->
+  <meta property="og:type" content="website">
+  <meta property="og:locale" content="ar_AR">
+  <meta property="og:site_name" content="رواد">
+  <meta property="og:title" content="رواد — حكايات عربية للأطفال">
+  <meta property="og:description" content="قصص ومغامرات بالعربية الفصحى للأطفال من 3 إلى 9 سنوات.">
+  <meta property="og:image" content="assets/img/brand/og-image.jpg">
+  <meta name="twitter:card" content="summary_large_image">
+  <link rel="icon" type="image/png" sizes="64x64" href="assets/img/brand/favicon-64.png">
+  <link rel="apple-touch-icon" href="assets/img/brand/apple-touch-icon.png">
+  <link rel="manifest" href="manifest.webmanifest">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Baloo+Bhaijaan+2:wght@400..800&display=swap">
+  <link rel="stylesheet" href="assets/css/rowad.css">
+  <link rel="preload" as="image" href="assets/img/hero/robo-wide.webp" fetchpriority="high">
+</head>
+<body data-page="landing">
+  <script src="assets/js/icons.js"></script>
+  <a class="skip-link" href="#main">تخطَّ إلى المحتوى</a>
+  <div class="sky" aria-hidden="true">
+    <span class="cloud cloud--1"></span><span class="cloud cloud--2"></span><span class="cloud cloud--3"></span><span class="cloud cloud--4"></span>
+  </div>
+
+  <header class="site-head">
+    <a class="site-head__logo" href="index.html" aria-label="رواد — الصفحة الرئيسية">
+      <img src="assets/img/brand/logo-280.webp" alt="رواد" width="280" height="215">
+    </a>
+    <div class="site-head__actions" id="headActions">
+      <a class="btn btn--ghost btn--sm" href="login.html">تسجيل الدخول</a>
+      <a class="btn btn--sun btn--sm site-head__signup" href="signup.html">إنشاء حساب</a>
+    </div>
+  </header>
+
+  <main id="main">
+    <section class="wrap landing-hero">
+      <div class="landing-hero__text enter">
+        <h1 class="h-display">حكايات عربية ممتعة لأطفالكم</h1>
+        <p class="lead">قصص ومغامرات بالعربية الفصحى للأطفال من 3 إلى 9 سنوات. في كل حكاية متعة جديدة وقيمة جميلة.</p>
+        <div class="landing-hero__cta">
+          <a class="btn btn--sun btn--lg btn--play" href="signup.html" data-cta>
+            <span class="btn__play"><svg class="ico" aria-hidden="true"><use href="#i-play-fill"/></svg></span><span data-cta-label>أنشئ حسابًا</span>
+          </a>
+          <a class="btn btn--ghost btn--lg" href="login.html" data-login>تسجيل الدخول</a>
+        </div>
+      </div>
+
+      <div class="landing-hero__art">
+        <div class="landing-hero__frame">
+          <img src="assets/img/hero/robo-wide.webp" alt="يوسف وكلبه بندق والروبوت روبو يجلسون على تلّة خضراء تطل على مدينة المستقبل" width="1536" height="1024" fetchpriority="high">
+        </div>
+        <img class="landing-hero__float landing-hero__float--1" src="assets/img/icons/values.webp" alt="" width="320" height="320">
+        <img class="landing-hero__float landing-hero__float--2" src="assets/img/icons/bedtime.webp" alt="" width="320" height="320">
+        <img class="landing-hero__float landing-hero__float--3" src="assets/img/icons/animals.webp" alt="" width="320" height="320">
+      </div>
+    </section>
+
+    <section class="band band--white" aria-labelledby="worldsTitle">
+      <div class="wrap">
+        <div class="band__head">
+          <h2 class="h1" id="worldsTitle">أربعة عوالم من الحكايات</h2>
+          <p>لكل طفل حكاية تناسب يومه: مغامرة في الصباح، وقصة هادئة قبل النوم.</p>
+        </div>
+        <nav class="cats" id="cats" aria-label="تصنيفات القصص"></nav>
+      </div>
+    </section>
+
+    <section class="band" aria-labelledby="libraryTitle">
+      <div class="wrap">
+        <div class="band__head">
+          <h2 class="h1" id="libraryTitle">من مكتبة رواد</h2>
+          <p>قصص قصيرة مدتها دقائق، وعلى كل قصة العمر المناسب لها.</p>
+        </div>
+        <div class="rail rail--grid" id="previewRail"></div>
+      </div>
+    </section>
+
+    <section class="band band--white" aria-labelledby="parentsTitle">
+      <div class="wrap">
+        <div class="band__head">
+          <h2 class="h1" id="parentsTitle">مصمَّم ليطمئن الأهل</h2>
+          <p>أدوات بسيطة تبقيكم على اطّلاع، وتترك للطفل متعة الاكتشاف.</p>
+        </div>
+        <div class="features">
+          <article class="feature">
+            <span class="tone-icon" data-tone="green"><svg class="ico" aria-hidden="true"><use href="#i-users-three-fill"/></svg></span>
+            <h3 class="h3">قصص مناسبة لكل عمر</h3>
+            <p>على كل قصة العمر المناسب لها، لتختاروا لطفلكم بثقة.</p>
+          </article>
+          <article class="feature">
+            <span class="tone-icon" data-tone="sun"><svg class="ico" aria-hidden="true"><use href="#i-timer-fill"/></svg></span>
+            <h3 class="h3">وقت مشاهدة بحدود</h3>
+            <p>حدّدوا المدة اليومية، وتابعوا النشاط الأسبوعي من لوحة وليّ الأمر.</p>
+          </article>
+          <article class="feature">
+            <span class="tone-icon" data-tone="red"><svg class="ico" aria-hidden="true"><use href="#i-heart-fill"/></svg></span>
+            <h3 class="h3">المفضلة والتنزيلات</h3>
+            <p>يحفظ الطفل قصصه المحببة ويعود إليها متى شاء.</p>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <section class="band">
+      <div class="wrap">
+        <div class="cta-band">
+          <img src="assets/img/icons/robo-wave.webp" alt="" width="320" height="320" loading="lazy">
+          <h2 class="h1">روبو في انتظاركم</h2>
+          <p>أنشئوا حسابًا، واختاروا لطفلكم اسمًا وصورة، وابدؤوا أول حكاية.</p>
+          <a class="btn btn--sun btn--lg" href="signup.html" data-cta><span data-cta-label>أنشئ حسابًا</span></a>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <footer class="site-foot">
+    <img src="assets/img/brand/logo-280.webp" alt="رواد" width="280" height="215" loading="lazy">
+    <p>© <span class="num">2026</span> رواد. جميع الحقوق محفوظة.</p>
+  </footer>
+
+  <script src="assets/js/data.js" defer></script>
+  <script src="assets/js/app.js" defer></script>
+  <script src="assets/js/pages.js" defer></script>
+</body>
+</html>
